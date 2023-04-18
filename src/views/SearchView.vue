@@ -81,9 +81,13 @@
                 </div>
             </div>
     </div>
-    <teacher-card-component></teacher-card-component>
+    <div v-for="t in teachers">
+        <teacher-card-component :teacher:="t"></teacher-card-component>
+
+    </div>
     {{ pricing }}
     {{ search }}
+    {{ teachers }}
 </template>
 
 <script setup>
@@ -92,12 +96,13 @@ import { storeToRefs } from 'pinia';
 import { useTanarStore } from '../stores/store';
 import TeacherCardComponent from '../components/TeacherCardComponent.vue';
 
-const {counties} = storeToRefs(useTanarStore());
-const {getAllCounties} = useTanarStore();
+const {counties, teachers} = storeToRefs(useTanarStore());
+const {getAllCounties, getTeachersUnfiltered} = useTanarStore();
 const search = ref('');
 
 const pricing = ref(undefined);
 getAllCounties();
+getTeachersUnfiltered();
 </script>
 
 <style lang="scss" scoped>
