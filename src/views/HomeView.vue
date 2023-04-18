@@ -1,8 +1,9 @@
 <script setup>
-
+import HomeCardComponent from '../components/HomeCardComponent.vue';
 </script>
 
 <template>
-  
-  ok
+<div>
+    <home-card-component/>
+</div>
 </template>
