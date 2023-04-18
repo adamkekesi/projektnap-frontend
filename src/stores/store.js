@@ -9,12 +9,12 @@ export const useTanarStore = defineStore('tanarStore', {
         teachers: [],
         counties: [],
         filter: {
-            subject: null,
-            grade: null,
-            countyId: null,
-            rating: null,
-            priceCategory: null,
-            name:null
+            subject: undefined,
+            grade: undefined,
+            countyId: undefined,
+            rating: undefined,
+            priceCategory: undefined,
+            name:undefined
         } 
     }),
     getters: {},
@@ -27,7 +27,7 @@ export const useTanarStore = defineStore('tanarStore', {
             })
         },
         getTeachersFiltered() {
-            axios.get(`/search-teacher?subject=${this.filter.subject}&grade=${this.filter.grade}&countyId=${this.filter.countyId}&name=${this.filter.name}`).then((resp) => {
+            axios.get(`/search-teacher?subject=${this.filter.subject||''}&grade=${this.filter.grade||''}&countyId=${this.filter.countyId||''}&name=${this.filter.name||''}`).then((resp) => {
                 this.teachers = resp.data;
 
             }).catch((err) => {
