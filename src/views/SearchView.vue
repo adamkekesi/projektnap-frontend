@@ -4,8 +4,8 @@
             <div class="col"></div>
             <div class="col-6 align-content-center m-4">
                 <div class="input-group m-4">
-                    <input type="search" id="form1" class="form-control" v-model="search" placeholder="Keresés..." />
-                    <button type="button" class="btn btn-success btn-lg">
+                    <input type="search" id="form1" class="form-control" v-model="filter.name" placeholder="Keresés..." />
+                    <button type="button" class="btn btn-success btn-lg" @click="search">
                         Keresés
                     </button>
                 </div>
@@ -82,12 +82,9 @@
             </div>
     </div>
     <div v-for="t in teachers">
-        <teacher-card-component :teacher:="t"></teacher-card-component>
-
+       <teacher-card-component :teacher:="t"></teacher-card-component> 
+      
     </div>
-    {{ pricing }}
-    {{ search }}
-    {{ teachers }}
 </template>
 
 <script setup>
@@ -96,13 +93,16 @@ import { storeToRefs } from 'pinia';
 import { useTanarStore } from '../stores/store';
 import TeacherCardComponent from '../components/TeacherCardComponent.vue';
 
-const {counties, teachers} = storeToRefs(useTanarStore());
-const {getAllCounties, getTeachersUnfiltered} = useTanarStore();
-const search = ref('');
+const {counties, teachers, filter} = storeToRefs(useTanarStore());
+const {getAllCounties, getTeachersUnfiltered,getTeachersFiltered} = useTanarStore();
 
 const pricing = ref(undefined);
 getAllCounties();
 getTeachersUnfiltered();
+
+const search = ()=>{
+  getTeachersFiltered()
+}
 </script>
 
 <style lang="scss" scoped>
