@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import TanarView from '../views/TanarView.vue'
+import TeacherView from '../views/TeacherView.vue'
 import SearchView from '../views/SearchView.vue'
 
 const router = createRouter({
@@ -12,9 +12,9 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/tanar',
-      name: 'tanar',
-      component: TanarView 
+      path: '/teacher',
+      name: 'teacher',
+      component: TeacherView 
     },
     {
       path: '/search',
