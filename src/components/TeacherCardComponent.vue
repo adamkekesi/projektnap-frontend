@@ -1,0 +1,109 @@
+<template>
+    <div class="m-3">
+        <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0 ">
+    <div class="col-md-4 col-4">
+      <img src="https://media.istockphoto.com/id/1160927409/photo/portrait-of-female-elementary-school-teacher-standing-in-classroom.jpg?s=612x612&w=0&k=20&c=cShdgor3DDR2suDcbD0cTIj4k-rAzHKztxnWU4nvTbs=" class="img-fluid m-3" alt="...">
+    </div>
+    <div class="col-4">
+      <div class="card-body ">
+
+      <div class="d-inline-flex my-3">
+      <h5 class="card-title mx-3">Tanár név</h5>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill card-title" viewBox="0 0 16 16">
+         <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg>
+        <p class="mx-2">5.0</p>
+        </div>
+        <div></div>
+        <div class="d-inline-flex my-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-book card-text m-2" viewBox="0 0 16 16">
+              <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+          </svg>
+          <p class="subject math card-text">Matek</p>
+          <p class="subject history card-text">Ének</p>
+        </div>
+
+        <div>
+        </div>
+        <div class="d-inline-flex my-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill card-text m-2" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+            </svg>
+            <p class="card-text">Győr</p>
+        </div>
+
+      </div>
+        
+    </div>
+    <div class="col-4">
+    <div class="">
+        <a href=""  class=" justify-content-center btn btn-primary">GOMB</a>
+    </div>
+</div>
+  </div>
+</div>
+
+    </div>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss" scoped>
+
+.card{
+    background-color: rgb(3, 187, 61);
+    color: white;
+    box-shadow: inset 2px 2px 10px black;
+}
+.img-fluid{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    
+}
+
+.card-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.card-text{
+    font-size: 1.25rem;
+}
+
+
+.subject{
+    color: white;
+    border-radius: 3px;
+    padding: 6px;
+    margin: 2px;
+}
+.math{
+    background-color: blue;
+}
+.sing{
+    background-color: palevioletred;
+}
+.biology{
+    background-color: rgb(5, 200, 5);
+}
+.grammar{
+    background-color: red;
+}
+.literature{
+    background-color: dimgray;
+}
+.history{
+    background-color: rgb(188, 123, 37);
+}
+.english{
+    background-color: whitesmoke;
+    color: black;
+}
+.german{
+    background-color: cornflowerblue;
+}
+</style>
