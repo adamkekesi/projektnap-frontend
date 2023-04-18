@@ -6,7 +6,7 @@
         </div>
         <div class="body">
             <div class="bodyItem">
-                <span class="cardText name">Tanár neve</span>
+                <span class="cardText name">{{ teacher.name }}</span>
             </div>
             <div class="bodyItem">
                 <svg class="cardSvg" width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +14,7 @@
                     <path d="M9.38337 21.8L9.3667 29.6167C9.3667 31.7333 11 34 13 34.6667L18.3167 36.4333C19.2334 36.7333 20.75 36.7333 21.6834 36.4333L27 34.6667C29 34 30.6334 31.7333 30.6334 29.6167V21.8833" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M35.6667 25V15" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <span class="badge math">Matek</span>
+                <span class="badge math">{{ teacher.subject }}</span>
             </div>
             <div class="bodyItem">
                 <svg class="cardSvg" width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +37,9 @@
 </template>
 
 <script setup>
-
+import  Axios  from '../services/dataservice';
+import { useBookStore } from '../strores';
+const props = defineProps(["teacher"]);
 </script>
 
 <style lang="scss" scoped>
