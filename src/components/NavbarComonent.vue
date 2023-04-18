@@ -20,7 +20,7 @@
        
       </ul>
       <div class="nav-item" id="tanarvagy">  
-        <router-link to="/tanar" href="/tanar"  class=" nav-link">Tanár vagy?</router-link>
+        <router-link to="/teacher"  class=" nav-link">Tanár vagy?</router-link>
          </div>
     </div>
   </div>
