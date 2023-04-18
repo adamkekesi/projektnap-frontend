@@ -19,8 +19,8 @@
         </li>
        
       </ul>
-      <div class="nav-item">  
-        <a href="/tanar"  class="sticky-right nav-link">Tanár vagy?</a>
+      <div class="nav-item sticky-right">  
+        <a href="/tanar"  class=" nav-link">Tanár vagy?</a>
          </div>
     </div>
   </div>
