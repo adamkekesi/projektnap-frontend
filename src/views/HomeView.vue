@@ -1,9 +1,9 @@
 <script setup>
-import NavbarComponent from '../components/NavbarComonent.vue';
+import HomeCardComponent from '../components/HomeCardComponent.vue';
 </script>
 
 <template>
-
-<div class="sticky-top"><navbar-component/></div>
-
+<div>
+    <home-card-component/>
+</div>
 </template>
