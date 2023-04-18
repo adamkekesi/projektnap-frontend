@@ -1,4 +1,5 @@
 <script setup>
+
 import HomeCardComponent from '../components/HomeCardComponent.vue';
 </script>
 
