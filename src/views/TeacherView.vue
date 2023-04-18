@@ -1,10 +1,9 @@
 <template>
-    <navbar-component/>
     <div>
-        <h1>TESZT</h1>
+        <!-- <h1>TESZT</h1>
             {{ teachers }}
         <h1>TESZT2</h1>
-        <h1>END TESZT</h1>
+        <h1>END TESZT</h1> -->
     </div>
     <div class="container">
         <div class="row">

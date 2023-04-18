@@ -5,6 +5,7 @@ export const useTanarStore = defineStore('tanarStore', {
     state: () => ({
         selectedTeacher: null,
         teachers: [],
+        counties: [],
         filter: {
             subject: null,
             grade: null,
@@ -26,6 +27,15 @@ export const useTanarStore = defineStore('tanarStore', {
             axios.get(`/search-teacher?subject=atomfizika`).then((resp) => {
                 console.log(resp.data);
             }).catch((err) => {
+                console.log(err);
+            })
+        },
+        getAllCounties(){
+            return axios.get('/get-all-county')
+            .then(resp =>{
+                this.counties = resp.data;
+            })
+            .catch(err => {
                 console.log(err);
             })
         }
