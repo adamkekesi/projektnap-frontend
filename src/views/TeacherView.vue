@@ -1,15 +1,21 @@
 <template>
     <navbar-component/>
+    <div>
+        <h1>TESZT</h1>
+            {{ teachers }}
+        <h1>TESZT2</h1>
+        <h1>END TESZT</h1>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-4">
                 <div class="d-flex justify-content-center">
-                    <selected-teacher-card-component class="mt-5"/>
+                    <selected-teacher-card-component :teacher="selectedTeacher" class="mt-5"/>
                 </div>
             </div>
             <div class="col-8">
                 <div class="d-flex justify-content-center">
-                <selected-teacher-info-card-component class="mt-5"/>
+                <selected-teacher-info-card-component :teacher="selectedTeacher" class="mt-5"/>
                 </div>
             </div>
         </div>
@@ -25,7 +31,10 @@ import SelectedTeacherInfoCardComponent from '../components/SelectedTeacherInfoC
 import {storeToRefs} from 'pinia'
 import {useTanarStore} from '../stores/store'
 
-const {selectedTeacher} = storeToRefs(useTanarStore());
+const {selectedTeacher, teachers} = storeToRefs(useTanarStore());
+const {getTeachersUnfiltered, getTeachersFiltered} = useTanarStore();
+getTeachersUnfiltered();
+getTeachersFiltered();
 </script>
 
 <style lang="scss" scoped>

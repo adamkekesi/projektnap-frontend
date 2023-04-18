@@ -1,6 +1,7 @@
 <template>
   <div class="card" style="width: 32rem">
     <div class="card-header text-center">
+      <!-- <h1>{{ teacher.name }}</h1> -->
       <h1>Name</h1>
     </div>
     <div class="card-body px-4">
@@ -63,7 +64,9 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps(['teacher']);
+</script>
 
 <style lang="scss" scoped>
 .card-body {
