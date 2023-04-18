@@ -1,9 +1,10 @@
 import {defineStore} from "pinia";
 
 export const useTanarStore = defineStore('tanarStore', {
-    state: () => {
-
-    },
+    state: () => ({
+        selectedTeacher: null,
+        teachers: [],
+    }),
     getters: {},
     actions: {}
 })
