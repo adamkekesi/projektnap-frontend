@@ -1,10 +1,8 @@
 <template>
-    <div>
-        <!-- <h1>TESZT</h1>
-            {{ teachers }}
-        <h1>TESZT2</h1>
-        <h1>END TESZT</h1> -->
-    </div>
+
+    <input type="number" v-model="selectedTeacherId">
+    <button @click="getTeacherById">gimme teacher id</button>
+
     <div class="container">
         <div class="row">
             <div class="col-4">
@@ -30,8 +28,8 @@ import SelectedTeacherInfoCardComponent from '../components/SelectedTeacherInfoC
 import {storeToRefs} from 'pinia'
 import {useTanarStore} from '../stores/store'
 
-const {selectedTeacher, teachers} = storeToRefs(useTanarStore());
-const {getTeachersUnfiltered, getTeachersFiltered} = useTanarStore();
+const {selectedTeacher, teachers, selectedTeacherId} = storeToRefs(useTanarStore());
+const {getTeachersUnfiltered, getTeachersFiltered, getTeacherById, findTeacherCounty} = useTanarStore();
 getTeachersUnfiltered();
 getTeachersFiltered();
 </script>
