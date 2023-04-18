@@ -74,24 +74,27 @@
                         Árazás
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#" @click="pricing = '500-1000'">500-1000</a></li>
+                        <li><a class="dropdown-item" href="#" @click="pricing = '1000-1500'">1000-1500</a></li>
+                        <li><a class="dropdown-item" href="#" @click="pricing = '1500-2000'">1500-2000</a></li>
                     </ul>
                 </div>
             </div>
     </div>
+    {{ pricing }}
     {{ search }}
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useTanarStore } from '../stores/store';
+
 const {counties} = storeToRefs(useTanarStore());
 const {getAllCounties} = useTanarStore();
 const search = ref('');
 
+const pricing = ref(undefined);
 getAllCounties();
 </script>
 
