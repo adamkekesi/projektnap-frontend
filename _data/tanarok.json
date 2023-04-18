@@ -1,0 +1,25 @@
+{
+    "tanarok": [
+        {
+            "id": 1,
+            "name": "Kovács Zoltán",
+            "targyak": [
+                "matek", "prog"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Bólya Gábor",
+            "targyak": [
+                "minden"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Soós Gábor",
+            "targyak": [
+                "semmi"
+            ]
+        }
+    ]
+}
