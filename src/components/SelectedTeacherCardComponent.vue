@@ -1,9 +1,5 @@
 <template>
   <div class="card" style="width: 32rem">
-    <div class="card-header text-center">
-      <!-- <h1>{{ teacher.name }}</h1> -->
-      <h1>Name</h1>
-    </div>
     <div class="card-body px-4">
       <img class="teacherImg" src="https://media.istockphoto.com/id/1160927409/photo/portrait-of-female-elementary-school-teacher-standing-in-classroom.jpg?s=612x612&w=0&k=20&c=cShdgor3DDR2suDcbD0cTIj4k-rAzHKztxnWU4nvTbs=" alt="...">
       <h4>Tanár neve</h4>

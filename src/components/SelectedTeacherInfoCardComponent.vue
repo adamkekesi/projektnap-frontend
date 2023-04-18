@@ -5,13 +5,13 @@
         <div class="tableContainer">
           <table>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td class="dayName">Hétfő</td>
+              <td class="dayName">Kedd</td>
+              <td class="dayName">Szerda</td>
+              <td class="dayName">Csütörtök</td>
+              <td class="dayName">Péntek</td>
+              <td class="dayName">Szombat</td>
+              <td class="dayName">Vasárnap</td>
             </tr>
             <tr>
               <td></td>
@@ -57,6 +57,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 800px;
   }
   
   .card-header {
@@ -75,14 +76,28 @@
 
   h4{
     color: white;
+    margin-bottom: 30px;
   }
 
   table, td, tr{
-    border: 1px solid white;
+    border: 1px solid black;
   }
 
   table{
     width: 50vw;
     height: calc(80vh - 130px);
+    background-color: white;
+    width: 100%;
+  }
+
+  td{
+    color: black;
+    text-align: center;
+    height: 50px;
+    width: 80px;
+  }
+
+  .dayName{
+    font-weight: bold;
   }
 </style>
