@@ -1,50 +1,39 @@
 <template>
-    <div class="m-3">
-        <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0 ">
-    <div class="col-md-4 col-4">
-      <img src="https://media.istockphoto.com/id/1160927409/photo/portrait-of-female-elementary-school-teacher-standing-in-classroom.jpg?s=612x612&w=0&k=20&c=cShdgor3DDR2suDcbD0cTIj4k-rAzHKztxnWU4nvTbs=" class="img-fluid m-3" alt="...">
-    </div>
-    <div class="col-4">
-      <div class="card-body ">
 
-      <div class="d-inline-flex my-3">
-      <h5 class="card-title mx-3">Tanár név</h5>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill card-title" viewBox="0 0 16 16">
-         <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-        </svg>
-        <p class="mx-2">5.0</p>
+    <div class="teacherCard">
+        <div class="img">
+            <img class="teacherImg" src="https://media.istockphoto.com/id/1160927409/photo/portrait-of-female-elementary-school-teacher-standing-in-classroom.jpg?s=612x612&w=0&k=20&c=cShdgor3DDR2suDcbD0cTIj4k-rAzHKztxnWU4nvTbs=" alt="...">
         </div>
-        <div></div>
-        <div class="d-inline-flex my-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-book card-text m-2" viewBox="0 0 16 16">
-              <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-          </svg>
-          <p class="subject math card-text">Matek</p>
-          <p class="subject history card-text">Ének</p>
+        <div class="body">
+            <div class="bodyItem">
+                <span class="cardText name">Tanár neve</span>
+            </div>
+            <div class="bodyItem">
+                <svg class="cardSvg" width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.75 4.21673L6.7167 10.7667C3.50003 12.8667 3.50003 17.5667 6.7167 19.6667L16.75 26.2167C18.55 27.4 21.5167 27.4 23.3167 26.2167L33.3 19.6667C36.5 17.5667 36.5 12.8834 33.3 10.7834L23.3167 4.23339C21.5167 3.03339 18.55 3.03339 16.75 4.21673Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.38337 21.8L9.3667 29.6167C9.3667 31.7333 11 34 13 34.6667L18.3167 36.4333C19.2334 36.7333 20.75 36.7333 21.6834 36.4333L27 34.6667C29 34 30.6334 31.7333 30.6334 29.6167V21.8833" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M35.6667 25V15" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="badge math">Matek</span>
+            </div>
+            <div class="bodyItem">
+                <svg class="cardSvg" width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 22.3831C22.8719 22.3831 25.2 20.0551 25.2 17.1831C25.2 14.3113 22.8719 11.9832 20 11.9832C17.1282 11.9832 14.8 14.3113 14.8 17.1831C14.8 20.0551 17.1282 22.3831 20 22.3831Z" stroke="white" stroke-width="3"/>
+                    <path d="M6.03326 14.15C9.31659 -0.28335 30.6999 -0.266681 33.9666 14.1666C35.8832 22.6333 30.6166 29.8 25.9999 34.2333C22.6499 37.4666 17.3499 37.4666 13.9833 34.2333C9.38326 29.8 4.11659 22.6166 6.03326 14.15Z" stroke="white" stroke-width="3"/>
+                </svg>
+                <span class="cardText location" >Lakhely</span>
+            </div>
         </div>
-
-        <div>
+        <div class="button">
+            <button class="btn-primary cardBtn">
+                <svg width="40" height="40" viewBox="0 0 60 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.375 9.51975L38.6751 24.7331C40.6001 26.5298 40.6001 29.4698 38.6751 31.2664L22.375 46.4798" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
         </div>
-        <div class="d-inline-flex my-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill card-text m-2" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-            </svg>
-            <p class="card-text">Győr</p>
-        </div>
-
-      </div>
-        
     </div>
-    <div class="col-4">
-    <div class="">
-        <a href=""  class=" justify-content-center btn btn-primary">GOMB</a>
-    </div>
-</div>
-  </div>
-</div>
 
-    </div>
+
 </template>
 
 <script setup>
@@ -53,57 +42,82 @@
 
 <style lang="scss" scoped>
 
-.card{
-    background-color: rgb(3, 187, 61);
-    color: white;
-    box-shadow: inset 2px 2px 10px black;
+.main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
-.img-fluid{
-    border-radius: 50%;
-    height: 10rem;
-    width: 10rem;
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.teacherCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #00813B;
+    width: 480px;
+    height: 160px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+
+.teacherImg{
+    width: 120px;
+    height: 120px;
+    border-radius: 300px;
+    margin:  0 20px;
     object-fit: cover;
-    
 }
 
-.card-title{
-    font-size: 2rem;
-    font-weight: bold;
-}
-.card-text{
-    font-size: 1.25rem;
+.body{
+    width: 50%;
 }
 
-
-.subject{
+.cardText{
     color: white;
-    border-radius: 3px;
-    padding: 6px;
-    margin: 2px;
 }
+
+.name{
+    font-size: 25px;
+}
+
+.badge{
+    padding: 5px;
+}
+
+.cardSvg{
+    margin: 5px;
+}
+
+.cardBtn{
+    width: 60px;
+    height: 60px;
+    background-color: #004922;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-right: 40px;
+}
+
+.bodyItem{
+    margin-bottom: 5px;
+}
+
 .math{
-    background-color: blue;
+    background-color: #0017EA;
 }
-.sing{
-    background-color: palevioletred;
+
+@media only screen and (min-width: 1000px) {
+    .cardContainer{
+    grid-template-columns: 50% 50%;
+    }
 }
-.biology{
-    background-color: rgb(5, 200, 5);
-}
-.grammar{
-    background-color: red;
-}
-.literature{
-    background-color: dimgray;
-}
-.history{
-    background-color: rgb(188, 123, 37);
-}
-.english{
-    background-color: whitesmoke;
-    color: black;
-}
-.german{
-    background-color: cornflowerblue;
-}
+
+
 </style>
