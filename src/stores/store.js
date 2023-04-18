@@ -3,19 +3,31 @@ import {axios} from '../services/dataservice';
 
 export const useTanarStore = defineStore('tanarStore', {
     state: () => ({
-        teachers:[],
-        counties:[]
+        selectedTeacher: null,
+        teachers: [],
+        counties: [],
+        filter: {
+            subject: null,
+            grade: null,
+            countyId: null,
+            rating: null,
+            priceCategory: null,
+        } 
     }),
     getters: {},
     actions: {
-        getAllTeacher(){
-            return Axios.get('/search-teacher')
-            .then(resp =>{
-                console.log(resp.data);
-                //this.termekek = resp.data;
+        getTeachersUnfiltered() {
+            axios.get('/search-teacher').then((resp) => {
+                this.teachers = resp.data;
+            }).catch((err) => {
+                console.log(err);
             })
-            .catch(err => {
-                return Promise.reject(err);
+        },
+        getTeachersFiltered() {
+            axios.get(`/search-teacher?subject=atomfizika`).then((resp) => {
+                console.log(resp.data);
+            }).catch((err) => {
+                console.log(err);
             })
         },
         getAllCounties(){
@@ -27,6 +39,5 @@ export const useTanarStore = defineStore('tanarStore', {
                 console.log(err);
             })
         }
-
     }
 })

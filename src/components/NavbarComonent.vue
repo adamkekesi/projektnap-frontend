@@ -1,6 +1,6 @@
 <template>
     <div class="nbar">
-    <div class="container mx-4">
+    <div class="mx-4">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search mx-5" viewBox="0 0 16 16">
@@ -19,8 +19,8 @@
         </li>
        
       </ul>
-      <div class="nav-item">  
-        <a href="/tanar"  class="sticky-right nav-link">Tanár vagy?</a>
+      <div class="nav-item" id="tanarvagy">  
+        <router-link to="/teacher"  class=" nav-link">Tanár vagy?</router-link>
          </div>
     </div>
   </div>
@@ -41,6 +41,12 @@
     width: 100%;
     color: white;
 }
+
+#tanarvagy{
+  align-items: flex-end;
+  margin-right: 5em;
+}
+
 
 
 </style>

@@ -85,7 +85,7 @@
 </template>
 
 <script setup>
-
+import {ref} from 'vue'
 import { storeToRefs } from 'pinia';
 import { useTanarStore } from '../stores/store';
 const {counties} = storeToRefs(useTanarStore());
