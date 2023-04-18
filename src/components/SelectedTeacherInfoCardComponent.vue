@@ -23,5 +23,6 @@
   }
   .card {
     --bs-card-border-width: 0px !important;
+    height: 50rem;
   }
 </style>
