@@ -14,13 +14,10 @@
         </div>
     </div>
     <div class="container">
+            <div class="row justify-content-xxl-center text-center">
+                <h5 class="szures ">Szűrés:</h5>
 
-
-        <div class="row">
-            <div class="d-flex">
-                <h5 class="szures">Szűrés:</h5>
-
-                <div class="dropdown col">
+                <div class="dropdown col-xxl-2 col-xl-4 col-lg-6 p-1">
                     <button class="btn btn-success dropdown-toggle btn-lg" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="../assets/teacher.png" class="img-fluid" alt="tantargy" style="padding: 2px 10px;" />
@@ -33,7 +30,7 @@
                     </ul>
                 </div>
 
-                <div class="dropdown col">
+                <div class="dropdown col-xxl-2 col-xl-4 col-lg-6  p-1">
                     <button class="btn btn-success dropdown-toggle btn-lg" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../assets/vector.png" class="img-fluid" alt="tantargy" style="padding: 2px 10px;" />
@@ -46,7 +43,7 @@
                     </ul>
                 </div>
 
-                <div class="dropdown col">
+                <div class="dropdown col-xxl-2 col-xl-4 col-lg-6  p-1">
                     <button class="btn btn-success dropdown-toggle btn-lg" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../assets/location.png" class="img-fluid" alt="tantargy" style="padding: 2px 10px;" />
@@ -59,7 +56,7 @@
                     </ul>
                 </div>
 
-                <div class="dropdown col">
+                <div class="dropdown  col-xxl-2 col-xl-4 col-lg-6  p-1">
                     <button class="btn btn-success dropdown-toggle btn-lg" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../assets/star.png" class="img-fluid" alt="tantargy" style="padding: 2px 10px;" />
@@ -72,7 +69,7 @@
                     </ul>
                 </div>
 
-                <div class="dropdown col">
+                <div class="dropdown  col-xxl-2 col-xl-4 col-lg-6  p-1">
                     <button class="btn btn-success dropdown-toggle btn-lg" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../assets/coin.png" class="img-fluid" alt="tantargy" style="padding: 2px 10px;" />
@@ -85,8 +82,6 @@
                     </ul>
                 </div>
             </div>
-
-        </div>
     </div>
 </template>
 
