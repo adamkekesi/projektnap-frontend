@@ -34,8 +34,9 @@ export const useTanarStore = defineStore('tanarStore', {
                 console.log(err);
             })
         },
-        getTeacherById() {
-            axios.get(`/teacher/${this.selectedTeacherId}`).then((resp) => {
+        getTeacherById(id) {
+            this.selectedTeacherId = id;
+            axios.get(`/teacher/${id}`).then((resp) => {
                 console.log(resp);
                 this.selectedTeacher = resp.data;
             }).catch((err) => {

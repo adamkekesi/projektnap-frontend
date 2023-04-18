@@ -82,7 +82,7 @@
             </div>
     </div>
     <div v-for="t in teachers">
-       <teacher-card-component :teacher:="t"></teacher-card-component> 
+       <teacher-card-component :teacher="t"></teacher-card-component> 
       
     </div>
 </template>

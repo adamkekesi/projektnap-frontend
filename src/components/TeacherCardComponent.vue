@@ -6,7 +6,7 @@
         </div>
         <div class="body">
             <div class="bodyItem">
-                <span class="cardText name">{{ teacher.name }}</span>
+                <span class="cardText name">{{ props.teacher?.name }}</span>
             </div>
             <div class="bodyItem">
                 <svg class="cardSvg" width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +14,7 @@
                     <path d="M9.38337 21.8L9.3667 29.6167C9.3667 31.7333 11 34 13 34.6667L18.3167 36.4333C19.2334 36.7333 20.75 36.7333 21.6834 36.4333L27 34.6667C29 34 30.6334 31.7333 30.6334 29.6167V21.8833" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M35.6667 25V15" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <span class="badge math">{{ teacher.subject }}</span>
+                <span class="badge math">{{ props.teacher?.subject }}</span>
             </div>
             <div class="bodyItem">
                 <svg class="cardSvg" width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,11 +25,13 @@
             </div>
         </div>
         <div class="button">
-            <button class="btn-primary cardBtn">
-                <svg width="40" height="40" viewBox="0 0 60 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.375 9.51975L38.6751 24.7331C40.6001 26.5298 40.6001 29.4698 38.6751 31.2664L22.375 46.4798" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
+            <!-- <button class="btn-primary cardBtn" @click="getTeacherById(props.teacher?.id)"> -->
+                <router-link to="/teacher" @click="getTeacherById(props.teacher?.id)">
+                    <svg width="40" height="40" viewBox="0 0 60 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.375 9.51975L38.6751 24.7331C40.6001 26.5298 40.6001 29.4698 38.6751 31.2664L22.375 46.4798" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </router-link>
+            <!-- </button> -->
         </div>
     </div>
 
@@ -37,8 +39,9 @@
 </template>
 
 <script setup>
-import  Axios  from '../services/dataservice';
-import { useBookStore } from '../strores';
+import { useTanarStore } from '../stores/store';
+const {getTeacherById} = useTanarStore();
+
 const props = defineProps(["teacher"]);
 </script>
 

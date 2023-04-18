@@ -1,7 +1,7 @@
 <template>
 
-    <input type="number" v-model="selectedTeacherId">
-    <button @click="getTeacherById">gimme teacher id</button>
+    <!-- <input type="number" v-model="selectedTeacherId"> -->
+    <!-- <button @click="getTeacherById">gimme teacher id</button> -->
 
     <div class="container">
         <div class="row">
