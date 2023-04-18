@@ -49,10 +49,8 @@
                         <img src="../assets/location.png" class="img-fluid" alt="tantargy" style="padding: 2px 10px;" />
                         Vármegye
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" v-for="c in counties" href="#">{{ c.name }}</a></li>
                     </ul>
                 </div>
 
@@ -87,6 +85,12 @@
 
 <script setup>
 
+import { storeToRefs } from 'pinia';
+import { useTanarStore } from '../stores/store';
+const {counties} = storeToRefs(useTanarStore());
+const {getAllCounties} = useTanarStore();
+
+getAllCounties();
 </script>
 
 <style lang="scss" scoped>
@@ -96,5 +100,11 @@
 .szures{
     margin-right: 30px;
     margin-top: 10px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
 }
 </style>
