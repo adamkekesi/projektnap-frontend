@@ -81,6 +81,7 @@
                 </div>
             </div>
     </div>
+    <teacher-card-component></teacher-card-component>
     {{ pricing }}
     {{ search }}
 </template>
@@ -89,6 +90,7 @@
 import { ref } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useTanarStore } from '../stores/store';
+import TeacherCardComponent from '../components/TeacherCardComponent.vue';
 
 const {counties} = storeToRefs(useTanarStore());
 const {getAllCounties} = useTanarStore();
