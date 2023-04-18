@@ -12,13 +12,13 @@
 <style lang="scss" scoped>
     .card-body {
     background-color: rgba(0, 200, 0, 0.5);
-    border-bottom-right-radius: 30px !important;
-    border-bottom-left-radius: 30px !important;
+    border-bottom-right-radius: 1em !important;
+    border-bottom-left-radius: 1em !important;
   }
   
   .card-header {
-    border-top-right-radius: 30px !important;
-    border-top-left-radius: 30px !important;
+    border-top-right-radius: 1em !important;
+    border-top-left-radius: 1em !important;
     background-color: rgb(3, 187, 61);
   }
   .card {
