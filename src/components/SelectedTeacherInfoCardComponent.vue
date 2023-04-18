@@ -1,7 +1,7 @@
 <template>
   <div class="card" style="width: 50rem">
   <div class="card-header text-center">
-    <h2>Foglalás</h2>
+    <h1>Foglalás</h1>
   </div>
     <div class="card-body">Teacher Information</div>
   </div>
@@ -23,6 +23,6 @@
   }
   .card {
     --bs-card-border-width: 0px !important;
-    height: 50rem;
+    height: 40rem;
   }
 </style>

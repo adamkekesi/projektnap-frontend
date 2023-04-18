@@ -21,6 +21,11 @@
 import NavbarComponent from '../components/NavbarComonent.vue';
 import SelectedTeacherCardComponent from '../components/SelectedTeacherCardComponent.vue'
 import SelectedTeacherInfoCardComponent from '../components/SelectedTeacherInfoCardComponent.vue';
+
+import {storeToRefs} from 'pinia'
+import {useTanarStore} from '../stores/store'
+
+const {selectedTeacher} = storeToRefs(useTanarStore());
 </script>
 
 <style lang="scss" scoped>
