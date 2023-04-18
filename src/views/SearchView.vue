@@ -4,7 +4,7 @@
             <div class="col"></div>
             <div class="col-6 align-content-center m-4">
                 <div class="input-group m-4">
-                    <input type="search" id="form1" class="form-control" placeholder="Keresés..." />
+                    <input type="search" id="form1" class="form-control" v-model="search" placeholder="Keresés..." />
                     <button type="button" class="btn btn-success btn-lg">
                         Keresés
                     </button>
@@ -83,10 +83,12 @@
                 </div>
             </div>
     </div>
+    {{ search }}
 </template>
 
 <script setup>
 
+const search = ref('');
 </script>
 
 <style lang="scss" scoped>
